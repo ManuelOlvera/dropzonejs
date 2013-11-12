@@ -23,7 +23,7 @@ exports.fileUpload = function(req, res, fs, dirname){
 	    if(err){
 	      fileUploadResponseVal = "Error: " + err;	       
 	    }
-	    return fileUploadResponseVal;
+	    res.redirect('/');
 	  });
 	});
   } catch (err){
