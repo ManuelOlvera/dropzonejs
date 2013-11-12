@@ -1,0 +1,13 @@
+{
+  "name": "dropzonejs",
+  "description": "DropzoneJS is an open source library that provides drag'n'drop file uploads with image previews",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "ejs": "*"
+  }
+}
