@@ -29,7 +29,7 @@ app.get('/', dropzone.index);
 
 app.post('/file-upload', function(req, res){
 	var result = dropzone.fileUpload(req, res, fs, __dirname);
-	console.log(result);
+	console.log("Result: ", result);
 });
 
 http.createServer(app).listen(app.get('port'), function(){
