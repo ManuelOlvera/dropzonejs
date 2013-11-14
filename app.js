@@ -27,9 +27,14 @@ if ('development' == app.get('env')) {
 
 app.get('/', dropzone.index);
 
+app.get('/dropzone-full-form', dropzone.index2);
+
+app.post('/file-upload2', function(req, res){
+	dropzone.fileUpload2(req, res, fs, __dirname);	
+});
+
 app.post('/file-upload', function(req, res){
-	var result = dropzone.fileUpload(req, res, fs, __dirname);
-	console.log("Result: ", result);
+	dropzone.fileUpload(req, res, fs, __dirname);
 });
 
 http.createServer(app).listen(app.get('port'), function(){
